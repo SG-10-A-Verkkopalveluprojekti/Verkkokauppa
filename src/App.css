@@ -17,6 +17,10 @@ body {
   color: yellow;
 }
 
+.nav-link {
+  padding-top: 13px;
+}
+
 form .btn {
   color: white;
   border-color: white;
@@ -101,4 +105,12 @@ footer div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 991.5px) {
+
+  .nav-link, .navbar-brand {
+    display: none;
+  }
+
 }
