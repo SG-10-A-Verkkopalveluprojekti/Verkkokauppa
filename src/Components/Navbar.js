@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../Images/Northern Pc Store Logo.png'
 import Sidebar from './Sidebar';
+import * as FaIcons from 'react-icons/fa'
 
 
 export default function Navbar() {
@@ -23,6 +24,9 @@ export default function Navbar() {
                         </li>
                         <li class="nav-item nav-link">
                             <a class="nav-link" href="#">Link 2</a>
+                        </li>
+                        <li id='cart'>
+                            <FaIcons.FaShoppingCart size="40px" color="white"/>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
