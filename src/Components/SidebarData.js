@@ -3,55 +3,83 @@ import * as FaIcons from 'react-icons/fa'
 import * as AiIcons from 'react-icons/ai'
 import * as IoIcons from 'react-icons/io'
 import * as RiIcons from 'react-icons/ri'
+import * as GiIcons from 'react-icons/gi'
+import * as BsIcons from 'react-icons/bs'
+import * as SiIcons from 'react-icons/si'
+import * as MdIcons from 'react-icons/md'
 
 export const SidebarData = [
         {
             title: 'Test page',
             path: '/testPage',
             icon: <AiIcons.AiFillHome />,
-            iconClosed: <RiIcons.RiArrowDownSFill />,
-            iconOpened: <RiIcons.RiArrowUpFill />,
+        },
 
-            subNav: [
-                {
-                    title: 'Users',
-                    path: '/testPage/users',
-                    icon: <IoIcons.IoIosPaper />,
-                },
-                {
-                    title: 'Revenue',
-                    path: '/testPage/revenue',
-                    icon: <IoIcons.IoIosPaper />,
-                },
-            ]
-        },
         {
-            title: 'reports',
-            path: '/reports',
-            icon: <AiIcons.AiFillHome />,
+            title: 'Components',
+            path: '/components',
+            icon: <GiIcons.GiComputerFan />,
             iconClosed: <RiIcons.RiArrowDownSFill />,
-            iconOpened: <RiIcons.RiArrowUpFill />,
+            iconOpened: <RiIcons.RiArrowUpSFill />,
             subNav: [
                 {
-                    title: 'Reports',
-                    path: '/reports/reports1',
-                    icon: <IoIcons.IoIosPaper />,
+                    title: 'Processors',
+                    path: '/components/processors',
+                    icon: <GiIcons.GiProcessor />,
                 },
                 {
-                    title: 'Reports2',
-                    path: '/reports/reports2',
-                    icon: <IoIcons.IoIosPaper />,
+                    title: 'Motherboards',
+                    path: '/components/motherboards',
+                    icon: <BsIcons.BsFillMotherboardFill />,
                 },
                 {
-                    title: 'Reports3',
-                    path: '/reports/reports3',
-                    icon: <IoIcons.IoIosPaper />,
+                    title: 'Graphic cards',
+                    path: '/components/graphic_cards',
+                    icon: <BsIcons.BsGpuCard />,
                 },
+                {
+                    title: 'Hard disks',
+                    path: '/components/hard_disks',
+                    icon: <BsIcons.BsFillDeviceSsdFill />,
+                },
+                {
+                    title: 'Power supplies',
+                    path: '/components/power_supplies',
+                    icon: <GiIcons.GiPowerGenerator />,
+                },
+                {
+                    title: 'Memory',
+                    path: '/components/memory',
+                    icon: <BsIcons.BsMemory />,
+                },
+                {
+                    title: 'Coolers',
+                    path: '/components/coolers',
+                    icon: <BsIcons.BsFan />,
+                },
+                {
+                    title: 'Cases',
+                    path: '/components/cases',
+                    icon: <GiIcons.GiStrongbox />,
+                }
             ]
         },
+
         {
-            title: 'Products',
-            path: '/products',
-            icon: <FaIcons.FaCartPlus />
-        }
+            title: 'Screens',
+            path: '/screens',
+            icon: <MdIcons.MdScreenshotMonitor />,
+        },
+
+        {
+            title: 'Keyboards',
+            path: '/keyboards',
+            icon: <GiIcons.GiKeyboard />,
+        },
+
+        {
+            title: 'Mouses',
+            path: '/mouses',
+            icon: <BsIcons.BsFillMouse3Fill />,
+        },
     ]
