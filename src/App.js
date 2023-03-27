@@ -18,7 +18,11 @@ function App() {
             </Routes>
         </Router>
         <div className="container">
-          <Front/>
+          <Router>
+              <Routes>
+                <Route path="/"element={<Front/>}/>
+              </Routes>
+          </Router>
         </div>
       <Footer/>
     </>
