@@ -11,18 +11,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-        <Router>
           <Navbar />
             <Routes>
               <Route path='/testPage' exact element= {TestPage} />
+              <Route path="/"element={<Front/>}/>
             </Routes>
-        </Router>
         <div className="container">
-          <Router>
-              <Routes>
-                <Route path="/"element={<Front/>}/>
-              </Routes>
-          </Router>
         </div>
       <Footer/>
     </>
