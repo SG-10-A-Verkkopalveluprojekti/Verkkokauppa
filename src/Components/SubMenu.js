@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
+// Creating and styling submenu buttons/divs
 const SidebarLink = styled(Link)`
     display: flex;
     color: #e1e9fc;
@@ -40,6 +41,7 @@ const DropdownLink = styled(Link)`
     }
 `;
 
+//Submenu toggle
 const SubMenu = ( { item }) => {
 const [subnav, setSubnav] = useState(false)
 

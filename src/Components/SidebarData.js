@@ -1,12 +1,9 @@
 import React from 'react'
-import * as FaIcons from 'react-icons/fa'
-import * as AiIcons from 'react-icons/ai'
-import * as IoIcons from 'react-icons/io'
-import * as RiIcons from 'react-icons/ri'
-import * as GiIcons from 'react-icons/gi'
-import * as BsIcons from 'react-icons/bs'
-import * as SiIcons from 'react-icons/si'
-import * as MdIcons from 'react-icons/md'
+import * as AiIcons from 'react-icons/ai';
+import * as RiIcons from 'react-icons/ri';
+import * as GiIcons from 'react-icons/gi';
+import * as BsIcons from 'react-icons/bs';
+import * as MdIcons from 'react-icons/md';
 
 export const SidebarData = [
         {
@@ -15,12 +12,15 @@ export const SidebarData = [
             icon: <AiIcons.AiFillHome />,
         },
 
+        // Button with submenu
         {
             title: 'Components',
             path: '/components',
             icon: <GiIcons.GiComputerFan />,
+            // Submenu open and closed icons
             iconClosed: <RiIcons.RiArrowDownSFill />,
             iconOpened: <RiIcons.RiArrowUpSFill />,
+            // Submenu
             subNav: [
                 {
                     title: 'Processors',
@@ -65,6 +65,7 @@ export const SidebarData = [
             ]
         },
 
+        //Button without submenu
         {
             title: 'Screens',
             path: '/screens',

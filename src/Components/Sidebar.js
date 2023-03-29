@@ -7,6 +7,7 @@ import {SidebarData} from './SidebarData';
 import SubMenu from './SubMenu';
 import {IconContext} from 'react-icons/lib';
 
+// Creating and styling of sidebar div with 'styled-components'
 const Nav = styled.div`
    // background: black;
     height: 80px;
@@ -47,19 +48,23 @@ const Sidebar = () => {
 
     const [sidebar, setSidebar] = useState(false)
 
+    //Sidebar toggle
     const showSidebar = () => setSidebar(!sidebar)
 
     return (
         <>
+        {/* Color of text and icons in value={{color: x }} */}
         <IconContext.Provider value={{ color: 'white'}}>
             <Nav>
                 <NavIcon to='#'>
+                    {/* Opening icon */}
                     <FaIcons.FaBars onClick={showSidebar} />
                 </NavIcon>
             </Nav>
             <SidebarNav sidebar={sidebar}>
                 <SidebarWrap>
                     <NavIcon to='#'>
+                        {/* Closing icon */}
                         <AiIcons.AiOutlineClose onClick={showSidebar}/>
                     </NavIcon>
                     {SidebarData.map((item, index) => {
