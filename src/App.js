@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import Products from './Components/Products';
 // import SpecialCarousel from './Components/SpecialCarousel';
 // import ProductCarousel1 from './Components/ProductCarousel1';
 // import ProductCarousel2 from './Components/ProductCarousel2';
