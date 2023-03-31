@@ -7,15 +7,19 @@ import * as MdIcons from 'react-icons/md';
 
 export const SidebarData = [
         {
-            title: 'Test page',
-            path: '/testPage',
+            title: 'Home page',
+            path: '/',
             icon: <AiIcons.AiFillHome />,
+        },
+        {
+            title: 'show item page',
+            path: '/showitem',
         },
 
         // Button with submenu
         {
             title: 'Components',
-            path: '/components',
+            path: '/',
             icon: <GiIcons.GiComputerFan />,
             // Submenu open and closed icons
             iconClosed: <RiIcons.RiArrowDownSFill />,
