@@ -21,6 +21,15 @@ body {
   padding-top: 13px;
 }
 
+/* dropdown menu categories */
+.dp-1 {
+  margin-top: 12px;
+  color: white;
+}
+
+.dp-1 :hover {
+  color: yellow;
+}
 #cart {
   margin-top: auto;
   margin-bottom: auto;
