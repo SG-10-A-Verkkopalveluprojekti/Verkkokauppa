@@ -9,12 +9,14 @@ import Front from './Pages/front';
 import TestPage from './Pages/testPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+const URL ='http://localhost:3000/Backend/';
+
 function App() {
   return (
     <>
-          <Navbar />
+          <Navbar url={URL} />
             <Routes>
-              <Route path='/testPage' exact element= {TestPage} />
+              <Route path='/testPage' exact element= {<TestPage />} />
               <Route path="/"element={<Front/>}/>
             </Routes>
         <div className="container">
