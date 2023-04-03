@@ -10,7 +10,7 @@ import ShowItem from './Pages/showItem';
 import TestPage from './Pages/testPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const URL ='http://localhost:3000/Backend/';
+const URL ='http://localhost:8000/';
 
 function App() {
   return (
