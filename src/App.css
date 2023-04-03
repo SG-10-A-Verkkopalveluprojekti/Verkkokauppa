@@ -30,6 +30,14 @@ body {
 .dp-1 :hover {
   color: yellow;
 }
+
+.dp-3 {
+  background-color: #0E8388;
+}
+
+.dp-3:hover {
+  background-color:#2E4F4F;
+}
 #cart {
   margin-top: auto;
   margin-bottom: auto;
