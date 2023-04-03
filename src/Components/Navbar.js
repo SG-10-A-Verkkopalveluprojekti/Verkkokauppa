@@ -41,7 +41,7 @@ export default function Navbar({url}) {
                                 {categories.map(category => (
                                     <li key={category.category_num}>
                                         <Link
-                                            className='dropdown-item'
+                                            className='dropdown-item dp-3'
                                             to={'/products/' + category.category_num}>{category.name}
                                         </Link>
                                     </li>
