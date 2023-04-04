@@ -24,7 +24,7 @@ export default function Products({ url }) {
     }, [params])
 
     return (
-        <div>
+        <div className="products-cm">
             <h3 className='products-category'>Products for {categoryName}</h3>
             {products.map(product => (
                 <div key={product.product_id}>
