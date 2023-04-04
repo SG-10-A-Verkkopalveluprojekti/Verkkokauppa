@@ -29,7 +29,12 @@ export default function Products({ url }) {
             {products.map(product => (
                 <div key={product.product_id}>
                     <img className='product-image'src={imagesURL + product.image} alt={product.name} />
-                    <p className='product-name'>{product.name}</p>
+                    <Link
+                        to={'/showitem/' + product.product_id}>
+                        <p>
+                            {product.name}
+                        </p>
+                    </Link>
                     <p className='product-price'>Price: {product.price.toFixed(2)} €</p>
                     <button className='btn product-btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus />Add to cart</button>
                 </div>

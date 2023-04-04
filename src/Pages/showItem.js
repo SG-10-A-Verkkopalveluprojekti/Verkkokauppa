@@ -5,6 +5,8 @@ import * as TbIcons from 'react-icons/tb';
 import SpecificItemBuy from '../Components/SpecificItemBuy';
 import SpecificItemInfo from '../Components/SpecificItemInfo';
 
+const imagesURL ='http://localhost:8000/images/';
+
 const ShowItem = ({ url }) => {
     const [product, setProduct] = useState(null);
 
@@ -25,7 +27,7 @@ const ShowItem = ({ url }) => {
             <div className='specific-item-contents'>
                 <div className='specific-item'>
                     <div className='specific-item-img'>
-                        <img src={product?.image} />
+                        <img src={imagesURL + product?.image} />
                     </div>
                     <div className='add-to-cart'>
                         <div className='specific-item-price'>{product?.price.toFixed(2)}</div>
