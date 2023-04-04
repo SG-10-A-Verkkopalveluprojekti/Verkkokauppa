@@ -37,7 +37,30 @@ body {
 
 .dp-3:hover {
   background-color:#2E4F4F;
+  color: yellow;
 }
+/* products & categories */
+
+.product-image {
+  max-width: 256px;
+  padding: 20px;
+}
+
+.product-btn {
+  margin: 25px;
+  padding: 20px;
+}
+
+.products-category, .product-name, .product-price {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 15px;
+}
+
+.product-name, .product-price {
+  font-size: 1rem;
+}
+
 #cart {
   margin-top: auto;
   margin-bottom: auto;
