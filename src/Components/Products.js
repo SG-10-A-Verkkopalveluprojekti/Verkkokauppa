@@ -2,9 +2,8 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import * as TbIcons from 'react-icons/tb';
-import Image from '../Images/Asus Geforce RTX 4070Ti GPU.png';
 
-const URL ='http://localhost:8000/images/';
+const imagesURL ='http://localhost:8000/images/';
 
 export default function Products({ url }) {
     const [categoryName, setCategoryName] = useState('');
@@ -26,13 +25,13 @@ export default function Products({ url }) {
 
     return (
         <div>
-            <h3>Products for {categoryName}</h3>
+            <h3 className='products-category'>Products for {categoryName}</h3>
             {products.map(product => (
                 <div key={product.product_id}>
-                    <img src={URL + product.image} alt={Image} />
-                    <p>{product.name}</p>
-                    <p>Price: {product.price.toFixed(2)} €</p>
-                    <button className='btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus />Add to cart</button>
+                    <img className='product-image'src={imagesURL + product.image} alt={product.name} />
+                    <p className='product-name'>{product.name}</p>
+                    <p className='product-price'>Price: {product.price.toFixed(2)} €</p>
+                    <button className='btn product-btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus />Add to cart</button>
                 </div>
             ))}
         </div>
