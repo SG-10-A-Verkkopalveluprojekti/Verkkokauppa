@@ -10,7 +10,7 @@ import ShowItem from './Pages/showItem';
 import TestPage from './Pages/testPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const URL ='http://localhost:3000/Backend/';
+const URL ='http://localhost:8000/';
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Navbar url={URL} />
           <Routes>
               <Route path="/"element={<Front/>}/>
+              <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
               <Route path="/showitem"element={<ShowItem/>}/>
               <Route path="/components/processors"element={<TestPage/>}/>
               <Route path="/components/motherboards"element={<TestPage/>}/>
