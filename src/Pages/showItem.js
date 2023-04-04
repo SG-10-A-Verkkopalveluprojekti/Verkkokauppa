@@ -4,13 +4,13 @@ import { useParams } from 'react-router-dom';
 import SpecificItemBuy from '../Components/SpecificItemBuy';
 import SpecificItemInfo from '../Components/SpecificItemInfo';
 
-const ShowItem = ({URL}) => {
+const ShowItem = ({url}) => {
     const [product, setProduct] = useState(null);
     
     let params = useParams();
 
     useEffect(() => {
-        axios.get(URL + 'products/getproduct.php/' + params.product_id)
+        axios.get(url + 'products/getproduct.php/' + params.product_id)
             .then((response) => {
                 const json = response.data;
                 setProduct(response.data);
