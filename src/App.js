@@ -19,7 +19,7 @@ function App() {
           <Routes>
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
-              <Route path="/showitem"element={<ShowItem/>}/>
+              <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
               <Route path="/components/processors"element={<TestPage/>}/>
               <Route path="/components/motherboards"element={<TestPage/>}/>
               <Route path="/components/graphic_cards"element={<TestPage/>}/>
