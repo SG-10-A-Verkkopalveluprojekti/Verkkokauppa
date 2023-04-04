@@ -1,12 +1,13 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import * as TbIcons from 'react-icons/tb';
 import SpecificItemBuy from '../Components/SpecificItemBuy';
 import SpecificItemInfo from '../Components/SpecificItemInfo';
 
-const ShowItem = ({url}) => {
+const ShowItem = ({ url }) => {
     const [product, setProduct] = useState(null);
-    
+
     let params = useParams();
 
     useEffect(() => {
@@ -21,10 +22,28 @@ const ShowItem = ({url}) => {
 
     return (
         <div>
-            <SpecificItemBuy/>
-            <SpecificItemInfo/>
+            <div className='specific-item-contents'>
+                <div className='specific-item'>
+                    <div className='specific-item-img'>
+                        <img src={product?.image} />
+                    </div>
+                    <div className='add-to-cart'>
+                        <div className='specific-item-price'>{product?.price.toFixed(2)}</div>
+                        <div className='specific-item-buy'>
+                            <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                            <div className='specific-item-delivery'>Estimated shipping time: 1-4 Weekdays</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='specific-item-info-contents'>
+                <div className='specific-item-info'>{product?.name}</div>
+            </div>
         </div>
     );
 }
+
+{/* <SpecificItemBuy/> */ }
+{/* <SpecificItemInfo/> */ }
 
 export default ShowItem;
