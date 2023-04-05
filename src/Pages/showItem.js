@@ -30,7 +30,7 @@ const ShowItem = ({ url }) => {
                         <img src={imagesURL + product?.image} />
                     </div>
                     <div className='add-to-cart'>
-                        <div className='specific-item-price'>{product?.price.toFixed(2)}</div>
+                        <div className='specific-item-price'>{product?.price.toFixed(2) + "€"}</div>
                         <div className='specific-item-buy'>
                             <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
                             <div className='specific-item-delivery'>Estimated shipping time: 1-4 Weekdays</div>
