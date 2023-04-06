@@ -20,17 +20,6 @@ function App() {
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
               <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
-              <Route path="/components/processors"element={<TestPage/>}/>
-              <Route path="/components/motherboards"element={<TestPage/>}/>
-              <Route path="/components/graphic_cards"element={<TestPage/>}/>
-              <Route path="/components/hard_disks"element={<TestPage/>}/>
-              <Route path="/components/power_supplies"element={<TestPage/>}/>
-              <Route path="/components/memory"element={<TestPage/>}/>
-              <Route path="/components/coolers"element={<TestPage/>}/>
-              <Route path="/components/cases"element={<TestPage/>}/>
-              <Route path="/screens"element={<TestPage/>}/>
-              <Route path="/keyboards"element={<TestPage/>}/>
-              <Route path="/mouses"element={<TestPage/>}/>
             </Routes>
         <div className="container">
         </div>

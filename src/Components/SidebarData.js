@@ -11,15 +11,10 @@ export const SidebarData = [
             path: '/',
             icon: <AiIcons.AiFillHome />,
         },
-        {
-            title: 'show item page',
-            path: '/showitem',
-        },
 
         // Button with submenu
         {
             title: 'Components',
-            path: '/',
             icon: <GiIcons.GiComputerFan />,
             // Submenu open and closed icons
             iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -28,42 +23,42 @@ export const SidebarData = [
             subNav: [
                 {
                     title: 'Processors',
-                    path: '/components/processors',
+                    path: '/products/1',
                     icon: <GiIcons.GiProcessor />,
                 },
                 {
                     title: 'Motherboards',
-                    path: '/components/motherboards',
+                    path: '/products/2',
                     icon: <BsIcons.BsFillMotherboardFill />,
                 },
                 {
                     title: 'Graphic cards',
-                    path: '/components/graphic_cards',
+                    path: '/products/3',
                     icon: <BsIcons.BsGpuCard />,
                 },
                 {
                     title: 'Hard disks',
-                    path: '/components/hard_disks',
+                    path: '/products/4',
                     icon: <BsIcons.BsFillDeviceSsdFill />,
                 },
                 {
                     title: 'Power supplies',
-                    path: '/components/power_supplies',
+                    path: '/products/5',
                     icon: <GiIcons.GiPowerGenerator />,
                 },
                 {
                     title: 'Memory',
-                    path: '/components/memory',
+                    path: '/products/6',
                     icon: <BsIcons.BsMemory />,
                 },
                 {
                     title: 'Coolers',
-                    path: '/components/coolers',
+                    path: '/products/7',
                     icon: <BsIcons.BsFan />,
                 },
                 {
                     title: 'Cases',
-                    path: '/components/cases',
+                    path: '/products/8',
                     icon: <GiIcons.GiStrongbox />,
                 }
             ]
@@ -72,19 +67,19 @@ export const SidebarData = [
         //Button without submenu
         {
             title: 'Screens',
-            path: '/screens',
+            path: '/products/9',
             icon: <MdIcons.MdScreenshotMonitor />,
         },
 
         {
             title: 'Keyboards',
-            path: '/keyboards',
+            path: '/products/10',
             icon: <GiIcons.GiKeyboard />,
         },
 
         {
             title: 'Mouses',
-            path: '/mouses',
+            path: '/products/11',
             icon: <BsIcons.BsFillMouse3Fill />,
         },
     ]
