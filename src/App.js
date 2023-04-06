@@ -7,6 +7,7 @@ import Products from './Components/Products';
 // import ProductCarousel2 from './Components/ProductCarousel2';
 import Front from './Pages/front';
 import ShowItem from './Pages/showItem';
+import AddCategory from './Pages/AddingCategory';
 import TestPage from './Pages/testPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -20,6 +21,7 @@ function App() {
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
               <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
+              <Route path="/admin"element={<AddCategory url={URL}/>}/>
             </Routes>
         <div className="container">
         </div>

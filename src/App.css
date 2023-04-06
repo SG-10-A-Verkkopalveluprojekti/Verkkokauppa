@@ -265,8 +265,24 @@ footer div {
 
 }
 
-/* showItem page ends */
 
+/* Admin page starts */
+
+.admin-contents {
+  display: flex;
+  align-content: center;
+  background-color: rgb(44, 51, 51, 0.95) ;
+  width: 1200px;
+  margin: 80px 20px;
+  padding: 30px;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 20px;
+  color: white;
+  
+}
+
+/*Admin page ends */
 @media screen and (max-width: 1245px) {
 
   /* showItem page starts */

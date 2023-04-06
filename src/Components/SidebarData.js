@@ -82,4 +82,9 @@ export const SidebarData = [
             path: '/products/11',
             icon: <BsIcons.BsFillMouse3Fill />,
         },
+        
+        {
+            title: 'admin',
+            path: '/admin',
+        },
     ]
