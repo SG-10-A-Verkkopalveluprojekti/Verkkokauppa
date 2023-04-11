@@ -8,6 +8,7 @@ import Products from './Components/Products';
 import Front from './Pages/front';
 import ShowItem from './Pages/showItem';
 import AddCategory from './Pages/AddingCategory';
+import AddProduct from './Pages/addingProduct';
 import TestPage from './Pages/testPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -21,7 +22,8 @@ function App() {
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
               <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
-              <Route path="/admin"element={<AddCategory url={URL}/>}/>
+              <Route path="/adminAddCategory"element={<AddCategory url={URL}/>}/>
+              <Route path="/adminAddProduct"element={<AddProduct url={URL}/>}/>
             </Routes>
         <div className="container">
         </div>
