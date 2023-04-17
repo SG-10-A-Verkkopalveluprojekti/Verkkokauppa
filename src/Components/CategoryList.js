@@ -20,8 +20,9 @@ export default function CategoryList({url,selectedCategory,setSelectedCategory})
     }, [selectedCategory])
 
     function onCategoryChange(value) {
-        setSelectedCategory(categories.filter(item => item.category_num === value));
-        //item?
+
+        setSelectedCategory(categories.find(item => item.category_num === value));
+        
     }
 
     return (
