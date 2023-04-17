@@ -275,13 +275,18 @@ footer div {
   width: 1200px;
   margin: 80px 20px;
   padding: 30px;
-  flex-direction: row;
   justify-content: space-between;
   border-radius: 20px;
   color: white;
-  
 }
 
+.admin-table {
+  color: white;
+}
+
+.category-list {
+  max-height: 100px;
+}
 /*Admin page ends */
 @media screen and (max-width: 1245px) {
 

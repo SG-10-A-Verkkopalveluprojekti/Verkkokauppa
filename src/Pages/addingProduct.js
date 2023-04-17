@@ -45,8 +45,10 @@ export default function ManageProducts({url}) {
         return (
             <div className='admin-contents'>
                 <h3>Manage products</h3>
-                <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}/>
-                <table className='table'>
+                <div className='category-list'>
+                    <CategoryList url={url} selectedCategory = {selectedCategory} setSelectedCategory={setSelectedCategory}/>
+                </div>
+                <table className='table admin-table'>
                     <thead>
                         <tr key={uuid()}>
                             <th>Name</th>
