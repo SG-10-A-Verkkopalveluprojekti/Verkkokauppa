@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from '../Images/Northern Pc Store Logo.png'
 import Banner from '../Images/Northern PC Store Banner.png'
 import Banner2 from '../Images/SaleBanner.png'
+import Banner3 from '../Images/Northern PC Store Banner 2.png'
 
 export default function SpecialCarousel() {
     return (
@@ -19,7 +20,7 @@ export default function SpecialCarousel() {
                     <img src={Banner2} class="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src={Logo} class="d-block w-100" alt="..." />
+                    <img src={Banner3} class="d-block w-100" alt="..." />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
