@@ -1,3 +1,11 @@
+# Logo and product images created using Midjourney AI image generator
+# Banner images used on project taken from pixapay roaylty free images
+
+Banner images backgrounds: https://pixabay.com/fi/photos/vuoret-lappi-kaltevuus-syksy-ruska-7623495/
+                        
+                            https://pixabay.com/fi/photos/lappi-vuori-mets%c3%a4-ensilumi-maisema-7262378/
+
+                            https://pixabay.com/fi/photos/maisema-j%c3%a4rvi-tunturi-syksy-ruska-7330266/
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
