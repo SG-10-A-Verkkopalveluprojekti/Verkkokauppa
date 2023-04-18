@@ -1,4 +1,4 @@
-# Logo and product images created using Midjourney AI image generator
+# Logo and product images created using Midjourney AI image generator and images edited using Paint.Net and Figma
 # Banner images used on project taken from pixapay roaylty free images
 
 Banner images backgrounds: https://pixabay.com/fi/photos/vuoret-lappi-kaltevuus-syksy-ruska-7623495/
