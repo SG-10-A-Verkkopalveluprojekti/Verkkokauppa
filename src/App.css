@@ -4,6 +4,7 @@ body {
   background-size: cover;
 }
 
+/* Navbar */
 .navbar {
   background-color: #2E4F4F;
   height: 100px;
@@ -21,7 +22,26 @@ body {
   padding-top: 13px;
 }
 
-/* dropdown menu categories */
+#cart {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+form .btn {
+  color: white;
+  border-color: white;
+}
+
+.navbar-brand img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.container {
+  width: 100vw;
+}
+
+/* Dropdown Menu Categories starts */
 .dp-1 {
   margin-top: 12px;
   color: white;
@@ -39,8 +59,9 @@ body {
   background-color:#2E4F4F;
   color: yellow;
 }
-/* products & categories */
+/* Dropdown Menu Categories ends */
 
+/* Products & Categories starts */
 .products-cm {
   background-color: rgb(44, 51, 51, 0.95) ;
   width: 450px;
@@ -86,26 +107,9 @@ body {
 .product-name, .product-price {
   font-size: 1rem;
 }
+/* Products & Categories ends */
 
-#cart {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-form .btn {
-  color: white;
-  border-color: white;
-}
-
-.navbar-brand img {
-  max-width: 80px;
-  max-height: 80px;
-}
-
-.container {
-  width: 100vw;
-}
-
+/*Special Carousel starts */
 .carousel {
   margin-top: 20px;
   height: 600px;
@@ -114,6 +118,14 @@ form .btn {
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.carousel-item {
+  transition: 2.3s ease-in-out;
+}
+
+.carousel-fade .carousel-item {
+  transition: 2.6s;
 }
 
 .carousel div {
