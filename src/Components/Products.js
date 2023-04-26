@@ -12,11 +12,31 @@ export default function Products({ url }) {
     let params = useParams();
 
     useEffect(() => {
-        axios.get(url + 'products/getproducts.php/' + params.categoryId)
+
+        let address = '';
+
+        if (params.searchPhrase === undefined) {
+            address = url + 'products/getproducts.php/' + params.categoryId.toLowerCase();
+        } else {
+            address = url + 'products/searchproducts.php/' + params.searchPhrase.toLowerCase();
+        }
+
+        axios.get(address)
             .then((response) => {
                 const json = response.data;
-                setCategoryName(json.category);
-                setProducts(json.products);
+                if(params.searchPhrase === undefined) {
+                    setCategoryName(json.category);
+                    setProducts(json.products);
+                } else {
+                    setCategoryName(params.searchPhrase);
+                    setProducts(json);
+                }
+            // })
+        // axios.get(url + 'products/getproducts.php/' + params.categoryId)
+        //     .then((response) => {
+        //         const json = response.data;
+        //         setCategoryName(json.category);
+        //         setProducts(json.products);
             }).catch(error => {
                 alert(error.response === undefined ? error : error.response.data.error);
             })
