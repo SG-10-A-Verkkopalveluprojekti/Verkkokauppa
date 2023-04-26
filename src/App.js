@@ -21,6 +21,7 @@ function App() {
           <Routes>
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
+              <Route path="/search/:searchPhrase" element={<Products url={URL}/>}/>
               <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
               <Route path="/adminAddCategory"element={<AddCategory url={URL}/>}/>
               <Route path="/adminAddProduct"element={<AddProduct url={URL}/>}/>
