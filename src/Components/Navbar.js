@@ -3,11 +3,13 @@ import Sidebar from './Sidebar';
 import * as FaIcons from 'react-icons/fa';
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Navbar({url}) {
     const [categories,setCategories] = useState([]);
+    const [search,setSearch] = useState('');
+    const navigate = useNavigate();
     
     useEffect(() => {
       axios.get(url + 'products/getcategories.php')
@@ -19,6 +21,13 @@ export default function Navbar({url}) {
             alert(error.response === undefined ? error: error.response.data.error);
         })
     }, [])
+
+    function executeSearch(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            navigate('/search/' + search);
+        }
+    }
     
 
     return (
@@ -60,8 +69,15 @@ export default function Navbar({url}) {
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/> 
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                        <input 
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        onKeyDown={(e) => executeSearch(e)}
+                        className="form-control me-2" 
+                        type="search" 
+                        placeholder="Search" 
+                        aria-label="Search"/> 
+                            {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
                     </form>
             </div>
         </nav>
