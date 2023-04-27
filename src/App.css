@@ -115,7 +115,7 @@ form .btn {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .category-button {
@@ -127,7 +127,7 @@ form .btn {
   font-weight: 500;
   align-items: center;
   justify-content: center;
-  background-color: #a9b6ff;
+  background-color: #aebbff;
   border: none;
   width: 100px;
   height: 100px;
@@ -142,7 +142,7 @@ form .btn {
 }
 
 .category-button:hover {
-  background-color: #8efff9;
+  background-color: #64b1ff;
 }
 
 .category-button span {
@@ -227,7 +227,7 @@ form .btn {
 
 #categories {
   margin-top: 20px;
-  height: 450px;
+  height: 250px;
   background-color: #CBE4DE;
   border: solid #2C3333 5px;
   border-radius: 5px;
@@ -394,7 +394,6 @@ footer div {
     width: 41.5vw;
   }
   /* showItem page ends */
-
 }
 
 @media screen and (max-width: 991.5px) {
@@ -454,5 +453,18 @@ footer div {
     padding-top: 30px;
   }
   /* showItem page ends */
-
+  #categories {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .category-button {
+  min-width: 100px;
+  min-height: 100px;
+  overflow: hidden;
+  white-space:pre-wrap;
+  text-overflow: ellipsis;
+  }
 }
