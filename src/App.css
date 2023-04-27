@@ -141,6 +141,34 @@ form .btn {
   margin-right: auto;
 }
 
+#discount-carousel {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  max-width: 100%;
+  background-color: #CBE4DE;
+  border: solid #2C3333 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#discount-carousel img {
+  max-height: 300px;
+}
+
+.original-price {
+  color: rgb(124, 119, 119);
+  font-weight: lighter;
+  text-decoration: line-through;
+}
+
+.lowered-price {
+  color: red;
+  text-decoration: underline;
+}
+
 .item-carousel {
   margin-right: auto;
   margin-left: auto;
