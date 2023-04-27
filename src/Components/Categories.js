@@ -19,9 +19,9 @@ export default function Categories() {
                 setCategories([
                     { category_num: 1, title: 'Processors', path: '/products/1', icon: <GiIcons.GiProcessor size={50} /> },
                     { category_num: 2, title: 'Motherboards', path: '/products/2', icon: <BsIcons.BsFillMotherboardFill size={50} /> },
-                    { category_num: 3, title: 'Graphic cards', path: '/products/3', icon: <BsIcons.BsGpuCard size={50} /> },
-                    { category_num: 4, title: 'Hard disks', path: '/products/4', icon: <BsIcons.BsFillDeviceSsdFill size={50} /> },
-                    { category_num: 5, title: 'Power supplies', path: '/products/5', icon: <GiIcons.GiPowerGenerator size={50} /> },
+                    { category_num: 3, title: 'Graphic Cards', path: '/products/3', icon: <BsIcons.BsGpuCard size={50} /> },
+                    { category_num: 4, title: 'Hard Disks', path: '/products/4', icon: <BsIcons.BsFillDeviceSsdFill size={50} /> },
+                    { category_num: 5, title: 'Power Supplies', path: '/products/5', icon: <GiIcons.GiPowerGenerator size={50} /> },
                     { category_num: 6, title: 'Memory', path: '/products/6', icon: <BsIcons.BsMemory size={50} /> },
                     { category_num: 7, title: 'Coolers', path: '/products/7', icon: <BsIcons.BsFan size={50} /> },
                     { category_num: 8, title: 'Cases', path: '/products/8', icon: <GiIcons.GiStrongbox size={50} /> },
