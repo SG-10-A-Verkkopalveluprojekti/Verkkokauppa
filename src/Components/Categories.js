@@ -1,12 +1,10 @@
-import * as AiIcons from 'react-icons/ai';
-import * as RiIcons from 'react-icons/ri';
 import * as GiIcons from 'react-icons/gi';
 import * as BsIcons from 'react-icons/bs';
 import * as MdIcons from 'react-icons/md';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 
 const URL = "http://localhost:8000/products/getcategories.php";
 
@@ -29,7 +27,7 @@ export default function Categories() {
                     { category_num: 8, title: 'Cases', path: '/products/8', icon: <GiIcons.GiStrongbox size={50} /> },
                     { category_num: 9, title: 'Screens', path: '/products/9', icon: <MdIcons.MdScreenshotMonitor size={50} /> },
                     { category_num: 10, title: 'Keyboards', path: '/products/10', icon: <GiIcons.GiKeyboard size={50} /> },
-                    { category_num: 11, title: 'Keyboards', path: '/products/11', icon: <BsIcons.BsFillMouse3Fill size={50} /> },
+                    { category_num: 11, title: 'Mouses', path: '/products/11', icon: <BsIcons.BsFillMouse3Fill size={50} /> },
 
                 ]);
             }).catch(error => {
