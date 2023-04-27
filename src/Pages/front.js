@@ -3,6 +3,7 @@ import SpecialCarousel from '../Components/SpecialCarousel';
 import ProductCarousel1 from '../Components/ProductCarousel1';
 import ProductCarousel2 from '../Components/ProductCarousel2';
 import Categories from '../Components/Categories';
+import DiscountCarousel from '../Components/DiscountCarousel';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 
@@ -16,6 +17,9 @@ export default function Front() {
             </div>
             <div className='row'>
                 <Categories/>
+            </div>
+            <div className='row' id='discount-carousel'>
+                <DiscountCarousel/>
             </div>
             <div className='row'>
                 <div className='products'>

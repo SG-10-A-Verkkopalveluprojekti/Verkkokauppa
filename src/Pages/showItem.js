@@ -22,6 +22,28 @@ const ShowItem = ({ url }) => {
             })
     }, [params])
 
+    function checkPrice () {
+
+        let price = product?.price.toFixed(2) + "€";
+
+        if (product?.lowered_price == null) {
+            price = <div>
+                        <p>{product?.price.toFixed(2) + "€"}</p>
+                    </div>
+        } 
+        
+        if (product?.lowered_price != null) {
+            price = <div>
+                        <p className='original-price'>{product?.price.toFixed(2) + "€"}</p>
+                        <p className='lowered-price'>{product?.lowered_price.toFixed(2) + "€"}</p>
+                    </div>
+        } 
+        
+        return price;
+    }
+
+    const price = checkPrice();
+
     return (
         <div>
             <div className='specific-item-contents'>
@@ -30,7 +52,7 @@ const ShowItem = ({ url }) => {
                         <img src={imagesURL + product?.image} />
                     </div>
                     <div className='add-to-cart'>
-                        <div className='specific-item-price'>{product?.price.toFixed(2) + "€"}</div>
+                        <div className='specific-item-price'>{price}</div>
                         <div className='specific-item-buy'>
                             <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
                             <div className='specific-item-delivery'>Estimated shipping time: 1-4 Weekdays</div>
