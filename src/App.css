@@ -461,8 +461,8 @@ footer div {
     justify-content: center;
   }
   .category-button {
-  min-width: 100px;
-  min-height: 100px;
+  min-width: auto;
+  padding: 8px 16px;
   overflow: hidden;
   white-space:pre-wrap;
   text-overflow: ellipsis;
