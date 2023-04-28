@@ -16,7 +16,7 @@ export default function Products({ url }) {
         let address = '';
 
         if (params.searchPhrase === undefined) {
-            address = url + 'products/getproducts.php/' + params.categoryId.toLowerCase();
+            address = url + 'products/getproducts.php/' + params.categoryId;
         } else {
             address = url + 'products/searchproducts.php/' + params.searchPhrase.toLowerCase();
         }
@@ -67,7 +67,7 @@ export default function Products({ url }) {
                             </p>
                         </div>
                     )}
-                    <button className='btn product-btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus />Add to cart</button>
+                    <button className='btn product-btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus size={25} />Add to cart</button>
                 </div>
             ))}
         </div>
