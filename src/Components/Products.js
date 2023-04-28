@@ -50,6 +50,7 @@ export default function Products({ url }) {
                 <div key={product.product_id}>
                     <img className='product-image' src={imagesURL + product.image} alt={product.name} />
                     <Link
+                        className='product-name-link'
                         to={'/showitem/' + product.product_id}>
                         <p>
                             {product.name}
