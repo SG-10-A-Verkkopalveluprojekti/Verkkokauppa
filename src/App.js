@@ -59,7 +59,7 @@ function App() {
               <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>}/>
               <Route path="/search/:searchPhrase" element={<Products url={URL}/>}/>
               <Route path="/products/:productId" element={<Products url={URL} />} />
-              <Route path="/order" element={<Order cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+              <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
               <Route path="/showitem/:product_id"element={<ShowItem url={URL} addToCart={addToCart}/>}/>
               <Route path="/adminAddCategory"element={<AddCategory url={URL}/>}/>
               <Route path="/adminAddProduct"element={<AddProduct url={URL}/>}/>
