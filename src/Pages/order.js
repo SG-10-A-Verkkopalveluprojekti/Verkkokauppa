@@ -7,6 +7,11 @@ import * as BsIcons from 'react-icons/bs';
 export default function Order({cart, removeFromCart, updateAmount}) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
+    const [firstName, setFirstname] = useState("");
+    const [lastName, setLastname] = useState("");
+    const [address, setAddress] = useState("");
+    const [zip, setZip] = useState("");
+    const [city, setCity] = useState("");
 
 
     let sum = 0;
