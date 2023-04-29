@@ -65,9 +65,6 @@ export default function Navbar({url, cart}) {
                         <li className="nav-item nav-link">
                             <a className="nav-link" href="#">Link 2</a>
                         </li>
-                        <li className='nav-item'>
-                            <Cart cart={cart} />                         
-                        </li>
                     </ul>
                     <form className="d-flex" role="search">
                         <input 
@@ -80,6 +77,11 @@ export default function Navbar({url, cart}) {
                         aria-label="Search"/> 
                             {/* <button className="btn btn-outline-success" type="submit">Search</button> */}
                     </form>
+                    <ul className="navbar-nav ml-auto">
+                        <li className='nav-item'>
+                            <Cart cart={cart} />                         
+                        </li>
+                    </ul>
             </div>
         </nav>
     );
