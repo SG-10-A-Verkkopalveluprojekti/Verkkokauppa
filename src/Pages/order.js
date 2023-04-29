@@ -16,7 +16,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
 
     let sum = 0;
 
-    function changeAmount(e,product) {
+    function changeAmount(e,product, index) {
         updateAmount(e.target.value,product);
         setInputIndex(index);
     }
