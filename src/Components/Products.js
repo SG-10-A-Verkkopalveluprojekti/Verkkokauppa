@@ -5,7 +5,7 @@ import * as TbIcons from 'react-icons/tb';
 
 const imagesURL = 'http://localhost:8000/images/';
 
-export default function Products({ url }) {
+export default function Products({ url, addToCart}) {
     const [categoryName, setCategoryName] = useState('');
     const [products, setProducts] = useState([]);
 
@@ -68,7 +68,7 @@ export default function Products({ url }) {
                             </p>
                         </div>
                     )}
-                    <button className='btn product-btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus size={25} />Add to cart</button>
+                    <button className='btn product-btn btn-primary' type="button" onClick={e => addToCart(product)}><TbIcons.TbShoppingCartPlus size={25}/> Add to cart</button>
                 </div>
             ))}
         </div>
