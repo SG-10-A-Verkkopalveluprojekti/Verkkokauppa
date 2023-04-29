@@ -1,17 +1,43 @@
 import React, { createRef } from 'react';
 import uuid from "react-uuid";
 import { useEffect, useState } from 'react';
+import axios from 'axios';
 import * as BsIcons from 'react-icons/bs';
 
 
-export default function Order({cart, removeFromCart, updateAmount}) {
+export default function Order({ url, cart, removeFromCart, updateAmount}) {
     const [inputs,_] = useState([]);
     const [inputIndex, setInputIndex] = useState(-1);
-    const [firstName, setFirstname] = useState("");
-    const [lastName, setLastname] = useState("");
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
     const [address, setAddress] = useState("");
     const [zip, setZip] = useState("");
     const [city, setCity] = useState("");
+
+    function order(e) {
+        e.preventDefault();
+
+        const json = JSON.stringify({
+            firstname: firstname,
+            lastname: lastname,
+            address: address,
+            zip: zip,
+            city: city,
+            cart: cart,
+        });
+        axios.post(url + 'order/save.php', json, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type' : 'application/json'
+        }
+    })
+    .then(() => {
+        // empty();
+        // setFinished(true);
+    }).catch(error => {
+        alert(error.response === undefined ? error : error.response.data.error);
+    });
+    }
 
 
     let sum = 0;
@@ -63,7 +89,7 @@ export default function Order({cart, removeFromCart, updateAmount}) {
             {cart.length > 0 && //Render order form, if there is something in cart
                 <>
                     <h3 className="header">Client information</h3>
-                    <form /*onSubmit={order}*/>
+                    <form onSubmit={order}>
                         <div className="form-group">
                             <label>First name:</label>
                             <input className="form-control" onChange={e => setFirstname(e.target.value)}/>
@@ -90,7 +116,6 @@ export default function Order({cart, removeFromCart, updateAmount}) {
                     </form>
                 </>
             }
-
-        </div>
+        </div>  
     )
 }
