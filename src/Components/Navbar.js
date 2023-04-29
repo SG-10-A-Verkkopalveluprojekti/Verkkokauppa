@@ -66,8 +66,7 @@ export default function Navbar({url, cart}) {
                             <a className="nav-link" href="#">Link 2</a>
                         </li>
                         <li className='nav-item'>
-                            <Cart cart={cart} />
-                            <FaIcons.FaShoppingCart size="40px" color="white"/>
+                            <Cart cart={cart} />                         
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
