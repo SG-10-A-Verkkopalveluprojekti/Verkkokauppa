@@ -6,7 +6,7 @@ export default function Cart({ cart }) {
     return (
         <div>
             <Link to={"/order"}>
-                <BsIcons.BsFillCartFill />
+                <BsIcons.BsFillCartFill size={50}/>
                 <span style={{color: '#fff'}}></span>
             </Link>
         </div>
