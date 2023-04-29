@@ -1,20 +1,48 @@
+import React, { createRef } from 'react';
 import uuid from "react-uuid";
+import { useEffect, useState } from 'react';
+import * as BsIcons from 'react-icons/bs';
 
-export default function Order({cart}) {
+
+export default function Order({cart, removeFromCart, updateAmount}) {
+    const [inputs,_] = useState([]);
+    const [inputIndex, setInputIndex] = useState(-1);
+
+
     let sum = 0;
 
+    function changeAmount(e,product) {
+        updateAmount(e.target.value,product);
+        setInputIndex(index);
+    }
+
+    useEffect(() => {
+        for (let i = 0; i<cart.length; i++) {
+            inputs[i] = createRef();
+        }
+    })
+
+    useEffect (() => {
+        if (inputs.length > 0 && inputIndex > -1 && inputs[inputIndex].current !== null) {
+            inputs[inputIndex].current.focus();
+        }
+    }, [cart])
+
     return (
-        <div>
+        <div className='cart-main'>
             <h3 className="header">Items in cart</h3>
-            <table className="table">
+            <table className="table cart-table">
                 <tbody>
-                    {cart.map(product => {
-                        sum+parseFloat(product.price);
+                    {cart.map((product, index) => {
+                        sum+=parseFloat(product.price);
                         return(
-                            <tr>
+                            <tr key={uuid()}>
                                 <td>{product.name}</td>
                                 <td>{product.price} €</td>
-                                <td></td>
+                                <td>
+                                    <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
+                                </td>
+                                <td><a href='#' onClick={() => removeFromCart(product)}><BsIcons.BsFillTrashFill/></a></td>
                             </tr>
                         )
                     })}
@@ -22,9 +50,42 @@ export default function Order({cart}) {
                         <td></td>
                         <td>{sum.toFixed(2)} €</td>
                         <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
+            
+            {cart.length > 0 && //Render order form, if there is something in cart
+                <>
+                    <h3 className="header">Client information</h3>
+                    <form /*onSubmit={order}*/>
+                        <div className="form-group">
+                            <label>First name:</label>
+                            <input className="form-control" onChange={e => setFirstname(e.target.value)}/>
+                        </div>
+                        <div className="form-group">
+                            <label>Last name:</label>
+                            <input className="form-control" onChange={e => setLastname(e.target.value)}/>
+                        </div>
+                        <div className="form-group">
+                            <label>Address:</label>
+                            <input className="form-control" onChange={e => setAddress(e.target.value)}/>
+                        </div>
+                        <div className="form-group">
+                            <label>Postal code:</label>
+                            <input className="form-control" onChange={e => setZip(e.target.value)}/>
+                        </div>
+                        <div className="form-group">
+                            <label>City:</label>
+                            <input className="form-control" onChange={e => setCity(e.target.value)}/>
+                            <div className="buttons">
+                                <button className="btn btn_primary">Order</button>
+                            </div>
+                        </div>
+                    </form>
+                </>
+            }
+
         </div>
     )
 }
