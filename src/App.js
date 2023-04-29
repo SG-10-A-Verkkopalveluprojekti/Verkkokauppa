@@ -10,11 +10,33 @@ import ShowItem from './Pages/showItem';
 import AddCategory from './Pages/AddingCategory';
 import AddProduct from './Pages/addingProduct';
 import TestPage from './Pages/testPage';
+import Order from './Pages/order';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const URL ='http://localhost:8000/';
 
 function App() {
+  const [cart, setCart] = useState([]);
+  
+  useEffect(() => {
+    if ('cart' in localStorage) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+  }, [])
+
+  function addToCart(product) {
+    if (cart.some(item => item.id === product.id)) {
+      const existingProduct = cart.filter(item => item.id === product.id);
+      updateAmount(parseInt(existingProduct[0].amount) + 1, product);
+    } else {
+      product['amount'] = 1;
+      const newCart = [...cart, product];
+      setCart(newCart);
+      localStorage.setItem('cart', JSON.stringify(newCart));
+    }
+  }
+
   return (
     <>
           <Navbar url={URL} />
@@ -22,6 +44,12 @@ function App() {
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
               <Route path="/search/:searchPhrase" element={<Products url={URL}/>}/>
+              {/* en oo varma noist poluist et onko oikein */}
+              <Route path="/products/:productId" element={<Products url={URL} addToCart={addToCart} />} />
+              <Route path="/order" element={<Order
+                url={URL}
+                cart={cart} />}
+              />
               <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
               <Route path="/adminAddCategory"element={<AddCategory url={URL}/>}/>
               <Route path="/adminAddProduct"element={<AddProduct url={URL}/>}/>

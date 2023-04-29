@@ -4,9 +4,10 @@ import * as FaIcons from 'react-icons/fa';
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Cart from './Cart';
 
 
-export default function Navbar({url}) {
+export default function Navbar({url, cart}) {
     const [categories,setCategories] = useState([]);
     const [search,setSearch] = useState('');
     const navigate = useNavigate();
@@ -64,7 +65,8 @@ export default function Navbar({url}) {
                         <li className="nav-item nav-link">
                             <a className="nav-link" href="#">Link 2</a>
                         </li>
-                        <li id='cart'>
+                        <li className='nav-item'>
+                            <Cart cart={cart} />
                             <FaIcons.FaShoppingCart size="40px" color="white"/>
                         </li>
                     </ul>
