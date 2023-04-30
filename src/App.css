@@ -371,11 +371,17 @@ footer div {
 
 .cart-main {
   background-color: rgb(44, 51, 51, 0.95) ;
-  width: 1200px;
-  margin: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  justify-content: center;
   padding: 30px;
   border-radius: 20px;
   color: white;
+  min-height: 65vh;
+
 }
 
 .cart-table {
@@ -391,6 +397,17 @@ footer div {
   color: rgb(94, 0, 0);
 }
 
+.order-button {
+  background-color: rgb(25, 135, 84);
+  border-color: rgb(42, 129, 89);
+  margin-top: 20px;
+}
+
+.order-button:hover {
+  background-color: rgb(11, 109, 65);
+  border-color: rgb(22, 94, 60);
+  box-shadow: 0.1px 0.1px 5px rgb(4, 58, 34);
+}
 /* shopping cart ends */
 
 
