@@ -110,12 +110,20 @@ async function correctPrice(url, product) {
             <table className="table cart-table">
                 <tbody>
                     {cart.map((product, index) => {
-                        sum+=parseFloat(product.price) * parseInt(product.amount);
+                        
+                        let productAmount
+                        
+                        if (product.lowered_price !== null) {
+                            productAmount = product.lowered_price;
+                        } else {
+                            productAmount = product.price;
+                        }
+
+                        sum+=parseFloat(productAmount) * parseInt(product.amount);
                         return(
                             <tr key={uuid()}>
                                 <td>{product.name}</td>
-                                <td>{product.price} €</td>
-                                {/* <td>{correctPrice()} €</td> */}
+                                <td>{productAmount} €</td>
                                 <td>
                                     <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
                                 </td>
