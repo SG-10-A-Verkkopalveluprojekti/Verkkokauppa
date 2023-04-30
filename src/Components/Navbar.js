@@ -11,6 +11,8 @@ export default function Navbar({url, cart}) {
     const [categories,setCategories] = useState([]);
     const [search,setSearch] = useState('');
     const navigate = useNavigate();
+
+    const cartItemCount = cart.reduce((total, product) => total + product.amount, 0);
     
     useEffect(() => {
       axios.get(url + 'products/getcategories.php')
@@ -71,7 +73,8 @@ export default function Navbar({url, cart}) {
                     </ul>
                     <ul className="navbar-nav ml-auto">
                         <li className='nav-item'>
-                            <Cart cart={cart} />                         
+                            <Cart cart={cart} />
+                            {cartItemCount > 0 &&<span className="cart-item-count">{cartItemCount}</span>}                         
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
