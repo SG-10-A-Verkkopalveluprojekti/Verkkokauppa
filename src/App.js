@@ -27,7 +27,7 @@ function App() {
   }, [])
 
   function updateAmount(amount, product) {
-    product.amount = amount;
+    product.amount = parseInt(amount);
     const index = cart.findIndex((item => item.product_id === product.product_id));
     const modifiedCart = Object.assign([...cart], {[index]: product});
     setCart(modifiedCart);
@@ -54,7 +54,7 @@ function App() {
 
   return (
     <>
-          <Navbar url={URL} />
+          <Navbar url={URL} cart={cart}/>
           <Routes>
               <Route path="/"element={<Front/>}/>
               <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>}/>
