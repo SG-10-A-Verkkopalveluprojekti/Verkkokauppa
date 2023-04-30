@@ -398,6 +398,18 @@ footer div {
   padding-top: 50px;
 }
 
+.cart-item-count {
+  position: absolute;
+  top: 10px;
+  right: 235px;
+  background-color: rgb(2, 112, 255);
+  color: white;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
 .add-to-cart button {
   background-color: rgb(25, 135, 84);
   border-color: rgb(42, 129, 89);
