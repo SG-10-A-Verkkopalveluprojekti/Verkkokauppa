@@ -55,7 +55,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount}) {
     })
     .then(() => {
         empty();
-        // setFinished(true);
+
     }).catch(error => {
         alert(error.response === undefined ? error : error.response.data.error);
     });
@@ -80,30 +80,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount}) {
             inputs[inputIndex].current.focus();
         }
     }, [cart])
-/*
-    function correctPrice (product) {
-        if (product.lowered_price !== null) {
-            return product.lowered_price;
-        } else {
-            return product.price;
-        }
-    }
 
-
-async function correctPrice(url, product) {
-    try {
-      const response = await axios.get(url + 'products/getproduct.php', product);
-      const products = response.data;
-      if (products.lowered_price !== null) {
-        return products.lowered_price;
-      } else {
-        return products.price;
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-*/
     return (
         <div className='cart-main'>
             <h3 className="header">Items in cart</h3>
