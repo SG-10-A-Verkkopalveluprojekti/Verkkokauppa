@@ -62,10 +62,10 @@ form .btn {
 }
 /* Dropdown Menu Categories ends */
 
-/* Products & Categories starts */
+/* Products & Categories starts here */
 .products-cm {
-  background-color: rgb(44, 51, 51, 0.95) ;
-  width: 450px;
+  background-color: #282f2ff2 ;
+  max-width: 500px;
   margin: 80px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -73,7 +73,6 @@ form .btn {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* justify-content: space-between; */
   justify-content: center;
   text-align: center;
   border-radius: 20px;
@@ -87,17 +86,40 @@ form .btn {
 }
 
 .product-image {
-  max-width: 256px;
+  object-fit: contain;
   padding: 20px;
+  width: 100%;
+  height: 256px;
+}
+
+.card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #505050cc;
+  border-radius: 15px;
 }
 
 .product-btn {
+  display: block;
+  max-width: 250px;
+  text-align: center;
   margin: 25px;
-  background-color: rgb(25, 135, 84);
-  border-color: rgb(42, 129, 89);
-  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #198754;
+  border-color: #2a8159;
+  font-size: 1.5rem;
   height: 50px;
   padding: 0px 30px;
+  margin-top: 45px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.card-text {
+  margin-top: 10px;
 }
 
 .product-btn:hover {
@@ -113,9 +135,40 @@ form .btn {
 }
 
 .product-price {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
-/* Products & Categories ends */
+/* Products & Categories ends here */
+
+/* Information page elements starts here */
+.information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.col-md-6.col-lg-3.mb-4 {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.card-info {
+  box-sizing: border-box;
+  background-color: #1483fa;
+  width: 100%;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
 /* Categories buttons starts here */
 #categories {
@@ -533,7 +586,6 @@ footer div {
   .nav-link, .navbar-brand {
     display: none;
   }
-  
   /* showItem page starts */
   .specific-item {
     width: 95vw;
@@ -592,6 +644,7 @@ footer div {
     align-items: center;
     justify-content: center;
   }
+
   .category-button {
   min-width: auto;
   padding: 8px 16px;
@@ -599,4 +652,16 @@ footer div {
   white-space:pre-wrap;
   text-overflow: ellipsis;
   }
+
+  .product-btn {
+    font-size: 1rem;
+    padding: 0px 20px;
+    height: 50px;
+  }
+
+  .card {
+    padding: 10px;
+    margin: 5px;
+  }
+  
 }
