@@ -13,15 +13,15 @@ const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 5
+        items: 3
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3
+        items: 2
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2
+        items: 1
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
@@ -54,9 +54,9 @@ export default function ProductCarousel1() {
 
     return (
         <Carousel responsive={responsive}>
-            <div className='item-carousel'>
+            <div className='item-carousel' style={{width:"475px"}}>
                 <img src={imagesURL + item1?.image} />
-                <Link
+                <Link className='product-link'
                     to={'/showitem/' + item1.product_id}>
                     <p>
                         {item1.name}
@@ -65,9 +65,9 @@ export default function ProductCarousel1() {
                 <p>{parseFloat(item1.price).toFixed(2)}€</p>
                 <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
-            <div className='item-carousel'>
+            <div className='item-carousel' style={{width:"475px"}}>
             <img src={imagesURL + item2?.image} />
-                <Link
+                <Link className='product-link'
                     to={'/showitem/' + item2.product_id}>
                     <p>
                         {item2.name}
@@ -76,9 +76,9 @@ export default function ProductCarousel1() {
                 <p>{parseFloat(item2.price).toFixed(2)}€</p>
                 <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
-            <div className='item-carousel'>
+            <div className='item-carousel' style={{width:"475px"}}>
             <img src={imagesURL + item3?.image} />
-                <Link
+                <Link className='product-link'
                     to={'/showitem/' + item3.product_id}>
                     <p>
                         {item3.name}
@@ -87,9 +87,9 @@ export default function ProductCarousel1() {
                 <p>{parseFloat(item3.price).toFixed(2)}€</p>
                 <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
-            <div className='item-carousel'>
+            <div className='item-carousel' style={{width:"475px"}}>
             <img src={imagesURL + item4?.image} />
-                <Link
+                <Link className='product-link'
                     to={'/showitem/' + item4.product_id}>
                     <p>
                         {item4.name}
@@ -98,9 +98,9 @@ export default function ProductCarousel1() {
                 <p>{parseFloat(item4.price).toFixed(2)}€</p>
                 <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
-            <div className='item-carousel'>
+            <div className='item-carousel' style={{width:"475px"}}>
             <img src={imagesURL + item5?.image} />
-                <Link
+                <Link className='product-link'
                     to={'/showitem/' + item5.product_id}>
                     <p>
                         {item5.name}
@@ -109,9 +109,9 @@ export default function ProductCarousel1() {
                 <p>{parseFloat(item5.price).toFixed(2)}€</p>
                 <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
-            <div className='item-carousel'>
+            <div className='item-carousel' style={{width:"475px"}}>
             <img src={imagesURL + item6?.image} />
-                <Link
+                <Link className='product-link'
                     to={'/showitem/' + item6.product_id}>
                     <p>
                         {item6.name}

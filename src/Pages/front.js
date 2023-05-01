@@ -12,22 +12,25 @@ export default function Front() {
         <>
             <div className='row'>
                 <div className='carousel-container'>
-                <SpecialCarousel/>
+                    <SpecialCarousel />
                 </div>
             </div>
             <div className='row'>
-                <Categories/>
+                <Categories />
             </div>
             <div className='row' id='discount-carousel'>
-                <DiscountCarousel/>
+                <h3>Discounts!</h3>
+                <div className='row' id='discountRow'>
+                    <DiscountCarousel />
+                </div>
             </div>
             <div className='row'>
                 <div className='products'>
                     <div className='row' id='itemRow1'>
-                        <ProductCarousel1/>
+                        <ProductCarousel1 />
                     </div>
                     <div className='row' id='itemRow2'>
-                        <ProductCarousel2/>
+                        <ProductCarousel2 />
                     </div>
                 </div>
             </div>
