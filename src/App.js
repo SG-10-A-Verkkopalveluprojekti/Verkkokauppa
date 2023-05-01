@@ -12,6 +12,7 @@ import AddProduct from './Pages/addingProduct';
 import TestPage from './Pages/testPage';
 import Order from './Pages/order';
 import FeedbackForm from './Components/FeedbackForm';
+import Information from './Components/Information';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -64,6 +65,7 @@ function App() {
               <Route path="/showitem/:product_id"element={<ShowItem url={URL} addToCart={addToCart}/>}/>
               <Route path="/adminAddCategory"element={<AddCategory url={URL}/>}/>
               <Route path="/adminAddProduct"element={<AddProduct url={URL}/>}/>
+              <Route path="/information" element={<Information />} />
               <Route path="/feedback" element={<FeedbackForm />} />
             </Routes>
         <div className="container">
