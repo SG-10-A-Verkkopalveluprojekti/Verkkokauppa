@@ -321,16 +321,25 @@ form .btn {
   background-color: #CBE4DE;
   border: solid #2C3333 5px;
   border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
+  padding:10px;
 }
 
-#discount-carousel img {
-  max-height: 300px;
+#discountRow {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #2C333395;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+#discountRow .item-carousel {
+  background-color: #2C333395;
+  border-radius: 20px;
 }
 
 .original-price {
-  color: rgb(124, 119, 119);
+  color: white;
   font-weight: lighter;
   text-decoration: line-through;
 }
@@ -343,10 +352,44 @@ form .btn {
 .item-carousel {
   margin-right: auto;
   margin-left: auto;
+  padding:20px;
 }
 
 .item-carousel img {
-  max-height: 300px;
+  max-height: 200px;
+}
+
+.item-carousel img, p {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.item-carousel p {
+  text-align: center;
+}
+
+.discount-link {
+  text-decoration: none;
+  color: white;
+}
+
+.discount-link:hover {
+  color: yellow;
+}
+
+.item-carousel button {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: green;
+  border-color: green;
 }
 
 .row {
@@ -367,7 +410,7 @@ form .btn {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  height: 1000px;
+  height: 1100px;
   max-width: 100%;
   background-color: #CBE4DE;
   border: solid #2C3333 5px;
@@ -379,17 +422,36 @@ form .btn {
 #itemRow1 div {
   margin-top: 20px;
   width: 100%;
-  /* height: 300px; */
-  background-color: #2C333395;
-  color: white;
-}
-#itemRow2 div {
-  margin-top: 20px;
-  width: 100%;
-  /* height: 300px; */
   background-color: #2C333395;
   color: white;
   margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+#itemRow1 li {
+  /* margin-right: 20px; */
+}
+
+#itemRow2 div {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #2C333395;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.product-link {
+  text-decoration: none;
+  color: white;
+}
+
+.product-link:hover {
+  color: yellow;
+}
+
+#itemRow2 li {
+  /* margin-right: 20px; */
 }
 
 footer {
