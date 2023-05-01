@@ -68,7 +68,10 @@ export default function Navbar({url, cart}) {
                             <a className="nav-link" href="#">Link 2</a>
                         </li>
                         <li className="nav-item nav-link">
-                         <Link className="nav-link" to="/feedback">Feedback</Link>
+                            <Link className="nav-link" to="/information">Information</Link>
+                        </li>
+                        <li className="nav-item nav-link">
+                            <Link className="nav-link" to="/feedback">Feedback</Link>
                         </li>
                     </ul>
                     <ul className="navbar-nav ml-auto">
