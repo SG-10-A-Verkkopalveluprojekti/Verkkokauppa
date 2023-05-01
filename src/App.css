@@ -139,7 +139,7 @@ form .btn {
 }
 /* Products & Categories ends here */
 
-/* Information page elements starts here */
+/* Information page starts here */
 .information-container {
   display: flex;
   flex-direction: column;
@@ -162,13 +162,32 @@ form .btn {
   max-width: 50%;
 }
 
+.card-text-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-title {
+  color:#0051a8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
 .card-info {
   box-sizing: border-box;
-  background-color: #1483fa;
+  background-color: #d5d5d5;
   width: 100%;
   font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+/* Information page ends here */
 
 /* Categories buttons starts here */
 #categories {
@@ -429,7 +448,7 @@ form .btn {
 }
 
 #itemRow1 li {
-  /* margin-right: 20px; */
+  margin-right: 20px;
 }
 
 #itemRow2 div {
@@ -451,7 +470,7 @@ form .btn {
 }
 
 #itemRow2 li {
-  /* margin-right: 20px; */
+  margin-right: 20px;
 }
 
 footer {
