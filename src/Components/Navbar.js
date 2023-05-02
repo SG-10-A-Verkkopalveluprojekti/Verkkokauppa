@@ -41,10 +41,10 @@ export default function Navbar({url, cart}) {
                             <Sidebar />
                         </li>                       
                         <li>
-                            <a className="navbar-brand" href="#"><img src = {Logo}/></a>
+                            <a className="navbar-brand" href="/"><img src = {Logo}/></a>
                         </li>
                         <li className="nav-item nav-link">
-                            <a className="nav-link" aria-current="page" href="#">Northern PC Store</a>
+                            <a className="nav-link" aria-current="page" href="/">Northern PC Store</a>
                         </li>
                         <li className='nav-item dp-1 dropdown'>
                             <a className='nav-link dropdown-toggle' href="#" id="dropdown01"
@@ -59,13 +59,6 @@ export default function Navbar({url, cart}) {
                                     </li>
                                 ))}
                             </ul>
-                        </li>
-
-                        <li className="nav-item nav-link">
-                            <a className="nav-link" href="#">Link</a>
-                        </li>
-                        <li className="nav-item nav-link">
-                            <a className="nav-link" href="#">Link 2</a>
                         </li>
                         <li className="nav-item nav-link">
                             <Link className="nav-link" to="/information">Information</Link>
