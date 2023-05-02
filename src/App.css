@@ -330,15 +330,21 @@ form .btn {
   margin-right: auto;
 }
 
+#sale-image {
+  max-height: 150px;
+  max-width: 250px;
+  padding-top: 20px;
+}
+
 #discount-carousel {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
+  height: 660px;
   max-width: 100%;
   background-color: #CBE4DE;
   border: solid #2C3333 5px;
-  border-radius: 5px;
+  border-radius: 20px;
   padding:10px;
 }
 
@@ -349,6 +355,7 @@ form .btn {
   color: white;
   margin-bottom: 20px;
   border-radius: 20px;
+  padding: 20px;
 }
 
 #discountRow .item-carousel {
@@ -388,6 +395,8 @@ form .btn {
 
 .item-carousel p {
   text-align: center;
+  word-wrap: break-word;
+  padding: 5px;
 }
 
 .discount-link {
@@ -432,7 +441,7 @@ form .btn {
   max-width: 100%;
   background-color: #CBE4DE;
   border: solid #2C3333 5px;
-  border-radius: 5px;
+  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -744,4 +753,16 @@ footer div {
     margin: 5px;
   }
   
+}
+
+@media only screen and (max-width: 1230px) {
+  .carousel {
+    display: none;
+  }
+
+  #categories {
+    overflow: scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }

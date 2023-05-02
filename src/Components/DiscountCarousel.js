@@ -47,7 +47,7 @@ export default function DiscountCarousel() {
             <Carousel responsive={responsive}>
                 {discounts.map(discount => (
                     <div key={discount.product_id} className='discount-items'>
-                        <div className='item-carousel' style={{width:"475px"}}>
+                        <div className='item-carousel' style={{width:"475px",minHeight:"410px"}}>
                         <img src={imagesURL + discount.image} />
                         <Link className='discount-link'
                             to={'/showitem/' + discount.product_id}>

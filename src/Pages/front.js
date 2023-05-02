@@ -4,6 +4,7 @@ import ProductCarousel1 from '../Components/ProductCarousel1';
 import ProductCarousel2 from '../Components/ProductCarousel2';
 import Categories from '../Components/Categories';
 import DiscountCarousel from '../Components/DiscountCarousel';
+import SaleImage from '../Images/Sale.svg'
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 
@@ -19,7 +20,7 @@ export default function Front() {
                 <Categories />
             </div>
             <div className='row' id='discount-carousel'>
-                <h3>Discounts!</h3>
+                <img src={SaleImage} alt='Sale' id='sale-image'/>
                 <div className='row' id='discountRow'>
                     <DiscountCarousel />
                 </div>
