@@ -16,11 +16,11 @@ const responsive = {
         items: 3
     },
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
+        breakpoint: { max: 3000, min: 1140 },
         items: 2
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
+        breakpoint: { max: 1140, min: 464 },
         items: 1
     },
     mobile: {
@@ -47,7 +47,7 @@ export default function DiscountCarousel() {
             <Carousel responsive={responsive}>
                 {discounts.map(discount => (
                     <div key={discount.product_id} className='discount-items'>
-                        <div className='item-carousel' style={{width:"475px"}}>
+                        <div className='item-carousel' style={{width:"475px",minHeight:"410px"}}>
                         <img src={imagesURL + discount.image} />
                         <Link className='discount-link'
                             to={'/showitem/' + discount.product_id}>
