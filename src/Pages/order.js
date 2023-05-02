@@ -22,7 +22,7 @@ export default function Order({ url, cart, removeFromCart, updateAmount}) {
 
     function empty() {
         localStorage.clear();
-        location.reload();
+        document.location.reload(true);
     }
 
     function order(e) {
