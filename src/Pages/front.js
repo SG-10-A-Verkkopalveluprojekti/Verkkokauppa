@@ -8,7 +8,7 @@ import SaleImage from '../Images/Sale.svg'
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import {Link} from 'react-router-dom';
 
-export default function Front() {
+export default function Front({ addToCart }) {
     return (
         <>
             <div className='row'>
@@ -22,16 +22,16 @@ export default function Front() {
             <div className='row' id='discount-carousel'>
                 <img src={SaleImage} alt='Sale' id='sale-image'/>
                 <div className='row' id='discountRow'>
-                    <DiscountCarousel />
+                    <DiscountCarousel addToCart={addToCart} />
                 </div>
             </div>
             <div className='row'>
                 <div className='products'>
                     <div className='row' id='itemRow1'>
-                        <ProductCarousel1 />
+                        <ProductCarousel1 addToCart={addToCart} />
                     </div>
                     <div className='row' id='itemRow2'>
-                        <ProductCarousel2 />
+                        <ProductCarousel2 addToCart={addToCart} />
                     </div>
                 </div>
             </div>

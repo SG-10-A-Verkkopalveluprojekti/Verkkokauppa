@@ -29,7 +29,7 @@ const responsive = {
     }
 };
 
-export default function DiscountCarousel() {
+export default function DiscountCarousel({ addToCart }) {
 
     const [discounts, setDiscounts] = useState([]);
 
@@ -42,6 +42,10 @@ export default function DiscountCarousel() {
                 alert(error.response === undefined ? error : error.response.data.error);
             })
     }, [])
+
+    const handleAddToCart = (discount) => {
+        addToCart(discount);
+      };
 
     return (
             <Carousel responsive={responsive}>
@@ -57,7 +61,7 @@ export default function DiscountCarousel() {
                         </Link>
                         <p className='original-price'>{discount.price.toFixed(2)}€</p>
                         <p className='lowered-price'>{discount.lowered_price.toFixed(2)}€</p>
-                        <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                        <button class="btn btn-primary" type="button" onClick={() => handleAddToCart(discount)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
                         </div>
                     </div>
                 ))}

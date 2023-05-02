@@ -29,7 +29,7 @@ const responsive = {
     }
 };
 
-export default function ProductCarousel1() {
+export default function ProductCarousel1({ addToCart}) {
     const [item1, setItem1] = useState("")
     const [item2, setItem2] = useState("")
     const [item3, setItem3] = useState("")
@@ -63,7 +63,7 @@ export default function ProductCarousel1() {
                     </p>
                 </Link>
                 <p>{parseFloat(item1.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button class="btn btn-primary" type="button" onClick={e => addToCart(item1)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item2?.image} />
@@ -74,7 +74,7 @@ export default function ProductCarousel1() {
                     </p>
                 </Link>
                 <p>{parseFloat(item2.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button class="btn btn-primary" type="button" onClick={e => addToCart(item2)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item3?.image} />
@@ -85,7 +85,7 @@ export default function ProductCarousel1() {
                     </p>
                 </Link>
                 <p>{parseFloat(item3.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button class="btn btn-primary" type="button" onClick={e => addToCart(item3)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item4?.image} />
@@ -96,7 +96,7 @@ export default function ProductCarousel1() {
                     </p>
                 </Link>
                 <p>{parseFloat(item4.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button class="btn btn-primary" type="button" onClick={e => addToCart(item4)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item5?.image} />
@@ -107,7 +107,7 @@ export default function ProductCarousel1() {
                     </p>
                 </Link>
                 <p>{parseFloat(item5.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button class="btn btn-primary" type="button" onClick={e => addToCart(item5)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item6?.image} />
@@ -118,7 +118,7 @@ export default function ProductCarousel1() {
                     </p>
                 </Link>
                 <p>{parseFloat(item6.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button class="btn btn-primary" type="button" onClick={e => addToCart(item6)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
         </Carousel>
     )
