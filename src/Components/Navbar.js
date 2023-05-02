@@ -4,12 +4,15 @@ import * as FaIcons from 'react-icons/fa';
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Cart from './Cart';
 
 
-export default function Navbar({url}) {
+export default function Navbar({url, cart}) {
     const [categories,setCategories] = useState([]);
     const [search,setSearch] = useState('');
     const navigate = useNavigate();
+
+    const cartItemCount = cart.reduce((total, product) => total + product.amount, 0);
     
     useEffect(() => {
       axios.get(url + 'products/getcategories.php')
@@ -64,8 +67,17 @@ export default function Navbar({url}) {
                         <li className="nav-item nav-link">
                             <a className="nav-link" href="#">Link 2</a>
                         </li>
-                        <li id='cart'>
-                            <FaIcons.FaShoppingCart size="40px" color="white"/>
+                        <li className="nav-item nav-link">
+                            <Link className="nav-link" to="/information">Information</Link>
+                        </li>
+                        <li className="nav-item nav-link">
+                            <Link className="nav-link" to="/feedback">Feedback</Link>
+                        </li>
+                    </ul>
+                    <ul className="navbar-nav ml-auto">
+                        <li className='nav-item'>
+                            <Cart cart={cart} />
+                            {cartItemCount > 0 &&<span className="cart-item-count">{cartItemCount}</span>}                         
                         </li>
                     </ul>
                     <form className="d-flex" role="search">

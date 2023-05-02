@@ -7,7 +7,7 @@ import SpecificItemInfo from '../Components/SpecificItemInfo';
 
 const imagesURL ='http://localhost:8000/images/';
 
-const ShowItem = ({ url }) => {
+const ShowItem = ({ url, addToCart }) => {
     const [product, setProduct] = useState(null);
 
     let params = useParams();
@@ -54,7 +54,7 @@ const ShowItem = ({ url }) => {
                     <div className='add-to-cart'>
                         <div className='specific-item-price'>{price}</div>
                         <div className='specific-item-buy'>
-                            <button class="btn btn-primary" type="button"><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                            <button class="btn btn-primary" type="button" onClick={e => addToCart(product)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
                             <div className='specific-item-delivery'>Estimated shipping time: 1-4 Weekdays</div>
                         </div>
                     </div>

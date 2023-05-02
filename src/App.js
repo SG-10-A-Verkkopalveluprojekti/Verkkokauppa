@@ -10,21 +10,63 @@ import ShowItem from './Pages/showItem';
 import AddCategory from './Pages/AddingCategory';
 import AddProduct from './Pages/addingProduct';
 import TestPage from './Pages/testPage';
+import Order from './Pages/order';
+import FeedbackForm from './Components/FeedbackForm';
+import Information from './Components/Information';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const URL ='http://localhost:8000/';
 
 function App() {
+  const [cart, setCart] = useState([]);
+  
+  useEffect(() => {
+    if ('cart' in localStorage) {
+      setCart(JSON.parse(localStorage.getItem('cart')));
+    }
+  }, [])
+
+  function updateAmount(amount, product) {
+    product.amount = parseInt(amount);
+    const index = cart.findIndex((item => item.product_id === product.product_id));
+    const modifiedCart = Object.assign([...cart], {[index]: product});
+    setCart(modifiedCart);
+    localStorage.setItem('cart', JSON.stringify(modifiedCart));
+  }
+
+  function addToCart(product) {
+    if (cart.some(item => item.product_id === product.product_id)) {
+      const existingProduct = cart.filter(item => item.product_id === product.product_id);
+      updateAmount(parseInt(existingProduct[0].amount) +1, product);
+    } else {
+      product["amount"] = 1;
+      const newCart = [...cart, product];
+      setCart(newCart);
+      localStorage.setItem('cart', JSON.stringify(newCart));
+    }
+  }
+
+  function removeFromCart(product) {
+    const itemsWithoutRemoved = cart.filter(item => item.product_id !== product.product_id);
+    setCart(itemsWithoutRemoved);
+    localStorage.setItem('cart',JSON.stringify(itemsWithoutRemoved));
+  }
+
   return (
     <>
-          <Navbar url={URL} />
+          <Navbar url={URL} cart={cart}/>
           <Routes>
               <Route path="/"element={<Front/>}/>
-              <Route path="/products/:categoryId" element={<Products url={URL}/>}/>
+              <Route path="/products/:categoryId" element={<Products url={URL} addToCart={addToCart}/>}/>
               <Route path="/search/:searchPhrase" element={<Products url={URL}/>}/>
-              <Route path="/showitem/:product_id"element={<ShowItem url={URL}/>}/>
+              <Route path="/products/:productId" element={<Products url={URL} />} />
+              <Route path="/order" element={<Order url={URL} cart={cart} removeFromCart={removeFromCart} updateAmount={updateAmount} />} />
+              <Route path="/showitem/:product_id"element={<ShowItem url={URL} addToCart={addToCart}/>}/>
               <Route path="/adminAddCategory"element={<AddCategory url={URL}/>}/>
               <Route path="/adminAddProduct"element={<AddProduct url={URL}/>}/>
+              <Route path="/information" element={<Information />} />
+              <Route path="/feedback" element={<FeedbackForm />} />
             </Routes>
         <div className="container">
         </div>

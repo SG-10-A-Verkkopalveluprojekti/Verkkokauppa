@@ -5,7 +5,7 @@ import * as TbIcons from 'react-icons/tb';
 
 const imagesURL = 'http://localhost:8000/images/';
 
-export default function Products({ url }) {
+export default function Products({ url, addToCart }) {
     const [categoryName, setCategoryName] = useState('');
     const [products, setProducts] = useState([]);
 
@@ -46,31 +46,37 @@ export default function Products({ url }) {
     return (
         <div className="products-cm">
             <h3 className='products-category'>Products for {categoryName}</h3>
-            {products.map(product => (
-                <div key={product.product_id}>
-                    <img className='product-image' src={imagesURL + product.image} alt={product.name} />
-                    <Link
-                        className='product-name-link'
-                        to={'/showitem/' + product.product_id}>
-                        <p>
-                            {product.name}
-                        </p>
-                    </Link>
-                    {product.lowered_price == null ? (
-                        <p className="product-price">Price: {product.price.toFixed(2) + "€"}</p>
-                    ) : (
-                        <div>
-                            <p className="original-price">
-                            Price:    {product.price.toFixed(2) + "€"}
-                            </p>
-                            <p className="lowered-price">
-                            Price:    {product.lowered_price.toFixed(2) + "€"}
-                            </p>
+            <div className="row">
+                {products.map(product => (
+                    <div key={product.product_id} className="col-12 mb-4 d-flex align-items-stretch">
+                        <div className="card">
+                            <img className='card-img-top product-image' src={imagesURL + product.image} alt={product.name} />
+                            <div className="card-body d-flex flex-column">
+                                <Link
+                                    className='product-name-link'
+                                    to={'/showitem/' + product.product_id}>
+                                    <h5 className="card-title text-white">
+                                        {product.name}
+                                    </h5>
+                                </Link>
+                                {product.lowered_price == null ? (
+                                    <p className="card-text product-price text-white">Price: {product.price.toFixed(2) + "€"}</p>
+                                ) : (
+                                    <div>
+                                        <p className="card-text original-price">
+                                            Price:    {product.price.toFixed(2) + "€"}
+                                        </p>
+                                        <p className="card-text lowered-price">
+                                            Price:    {product.lowered_price.toFixed(2) + "€"}
+                                        </p>
+                                    </div>
+                                )}
+                                <button className='btn product-btn btn-primary mt-auto' type="button" onClick={e => addToCart(product)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                            </div>
                         </div>
-                    )}
-                    <button className='btn product-btn btn-primary' type="button"><TbIcons.TbShoppingCartPlus size={25} />Add to cart</button>
-                </div>
-            ))}
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

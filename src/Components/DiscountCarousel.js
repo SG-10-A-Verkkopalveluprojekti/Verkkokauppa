@@ -13,15 +13,15 @@ const responsive = {
     superLargeDesktop: {
         // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
-        items: 5
+        items: 3
     },
     desktop: {
         breakpoint: { max: 3000, min: 1024 },
-        items: 3
+        items: 2
     },
     tablet: {
         breakpoint: { max: 1024, min: 464 },
-        items: 2
+        items: 1
     },
     mobile: {
         breakpoint: { max: 464, min: 0 },
@@ -44,14 +44,12 @@ export default function DiscountCarousel() {
     }, [])
 
     return (
-        <>
-            <h3>Discounts!</h3>
             <Carousel responsive={responsive}>
                 {discounts.map(discount => (
-                    <div key={discount.product_id}>
-                        <div className='item-carousel'>
+                    <div key={discount.product_id} className='discount-items'>
+                        <div className='item-carousel' style={{width:"475px"}}>
                         <img src={imagesURL + discount.image} />
-                        <Link
+                        <Link className='discount-link'
                             to={'/showitem/' + discount.product_id}>
                             <p>
                                 {discount.name}
@@ -64,6 +62,5 @@ export default function DiscountCarousel() {
                     </div>
                 ))}
             </Carousel>
-        </>
     )
 }
