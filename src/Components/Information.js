@@ -17,7 +17,7 @@ export default function Information() {
         },
         {
             title: 'Riku Ketomäki',
-            text: '- Done: - This is the final example text, but you can customize it as needed. - Total of logged hours done: ',
+            text: '- Done: - Side navigation bar - Database creation code - Item page CSS - Admin page where categories and products can be added - Ordering for shopping cart - Product amounts and delete button for shopping cart - Total of logged hours done: 59h',
         },
     ];
 
