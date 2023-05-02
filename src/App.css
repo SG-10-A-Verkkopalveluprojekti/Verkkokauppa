@@ -54,6 +54,9 @@ form .btn {
 
 .dp-3 {
   background-color: #0E8388;
+  height: 2px;
+  display: flex;
+  align-items: center;
 }
 
 .dp-3:hover {
