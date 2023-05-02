@@ -5,7 +5,7 @@ export default function Information() {
     const cardData = [
         {
             title: 'Juuso Pesonen',
-            text: '- Done: - Products listing ideas and planning. - Logo and half of products images done with Midjourney AI. - Front page carousel banner images. - Products by category section and products shown on each category. - Category buttons on front page. - Search bar functionality. - Feedback page. - Information page. -  Total of logged hours done: 45h 25m '
+            text: '- Done: - Products listing ideas and planning. - Logo and half of products images done with Midjourney AI. - Front page carousel banner images. - Products by category section and products shown on each category. - Category buttons on front page. - Search bar functionality. - Shopping cart products counter. - Feedback page. - Information page. -  Total of logged hours done: 45h 25m '
         },
         {
             title: 'Samuli Pohjola',
@@ -17,7 +17,7 @@ export default function Information() {
         },
         {
             title: 'Riku Ketomäki',
-            text: '- Done: - This is the final example text, but you can customize it as needed. - Total of logged hours done: ',
+            text: '- Done: - Side navigation bar - Database creation code - Item page CSS - Admin page where categories and products can be added - Ordering for shopping cart - Product amounts and delete button for shopping cart - Total of logged hours done: 59h',
         },
     ];
 
