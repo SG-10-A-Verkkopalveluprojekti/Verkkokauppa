@@ -628,19 +628,30 @@ footer div {
 /* Admin page starts */
 
 .admin-contents {
-  display: flex;
-  align-content: center;
   background-color: rgb(44, 51, 51, 0.95) ;
-  width: 1200px;
-  margin: 80px 20px;
+  display: flex;
+  flex-direction: row;
+  margin: auto 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  justify-content: left;
+  align-items: center;
   padding: 30px;
-  justify-content: space-between;
   border-radius: 20px;
   color: white;
+  min-height: 65vh;
 }
 
 .admin-table {
   color: white;
+}
+
+.admin-form {
+  margin-left: 30px;
+}
+
+.admin-label-category {
+  margin-left: 30px;
 }
 
 .category-list {
