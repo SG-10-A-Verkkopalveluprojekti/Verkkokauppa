@@ -88,19 +88,19 @@ export default function Order({ url, cart, removeFromCart, updateAmount}) {
                 <tbody>
                     {cart.map((product, index) => {
                         
-                        let productAmount
+                        let productPrice
                         
                         if (product.lowered_price !== null) {
-                            productAmount = product.lowered_price;
+                            productPrice = product.lowered_price;
                         } else {
-                            productAmount = product.price;
+                            productPrice = product.price;
                         }
 
-                        sum+=parseFloat(productAmount) * parseInt(product.amount);
+                        sum+=parseFloat(productPrice) * parseInt(product.amount);
                         return(
                             <tr key={uuid()}>
                                 <td>{product.name}</td>
-                                <td>{productAmount} €</td>
+                                <td>{productPrice.toFixed(2)} €</td>
                                 <td>
                                     <input ref={inputs[index]} style={{width: '60px'}} value={product.amount} onChange={e => changeAmount(e,product,index)} />
                                 </td>
