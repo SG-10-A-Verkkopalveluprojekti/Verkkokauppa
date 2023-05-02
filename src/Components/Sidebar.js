@@ -9,7 +9,6 @@ import {IconContext} from 'react-icons/lib';
 
 // Creating and styling of sidebar div with 'styled-components'
 const Nav = styled.div`
-   // background: black;
     height: 80px;
     padding-right: 30px;
     display: flex;
@@ -23,6 +22,9 @@ const SidebarNav = styled.nav`
     height: 100vh;
     display: flex;
     justify-content: center;
+    border-right-style: solid;
+    border-width: 1.5px;
+    border-color: black;
     position: fixed;
     top: 0;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
