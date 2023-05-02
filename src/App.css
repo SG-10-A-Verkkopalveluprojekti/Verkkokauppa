@@ -236,10 +236,9 @@ form .btn {
   flex-direction: column;
   width: 100%;
   max-width: 400px;
-  background-color: #353d3df2;
+  background-color: #4f4f4ff2;
   padding: 20px;
-  border-radius: 8px;
-  opacity: 0.9;
+  border-radius: 10px;
   margin: 0 auto;
   margin-top: 20px;
 }
