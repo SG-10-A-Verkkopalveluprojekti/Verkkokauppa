@@ -29,7 +29,7 @@ export default function ManageCategories({url}) {
             <div className='admin-contents'>
                 <h3>Manage categories</h3>
                 <div>
-                    <label>Category:</label>
+                    <label className='admin-label-category'>Category:</label>
                     <CategoryList
                         url={url}
                         selectedCategory={selectedCategory}
@@ -43,13 +43,13 @@ export default function ManageCategories({url}) {
         return (
             <div className='admin-contents'>
                 <h3>Add new category</h3>
-                <form onSubmit={saveCategory}>
+                <form className='admin-form' onSubmit={saveCategory}>
                     <div>
                         <label>Category name</label>
                         <input type="text" value={newCategory} onChange={(e) => setNewCategory(e.target.value)}/>
                     </div>
-                    <button type="button" onClick={() => setAddingCategory(false)}>Cancel</button>
-                    <button type="submit">Save</button>
+                    <button className="btn btn-dark" type="button" onClick={() => setAddingCategory(false)}>Cancel</button>
+                    <button className="btn btn-dark" type="submit">Save</button>
                 </form>
             </div>
         )

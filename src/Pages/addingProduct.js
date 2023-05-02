@@ -73,7 +73,7 @@ export default function ManageProducts({url}) {
         return (
             <div className='admin-contents'>
                 <h3>Add new product</h3>
-                <form onSubmit={saveProduct}>
+                <form className='admin-form' onSubmit={saveProduct}>
                     <div>
                         <label>Product name</label>
                         <input type="text" value={productName} onChange={(e) => setProductName(e.target.value)}/>
@@ -82,8 +82,8 @@ export default function ManageProducts({url}) {
                         <label>Product price</label>
                         <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>                    
                     </div>
-                    <button type="button" onClick={() => setAddingProduct(false)}>Cancel</button>
-                    <button type="submit">Save</button>
+                    <button className="btn btn-dark" type="button" onClick={() => setAddingProduct(false)}>Cancel</button>
+                    <button className="btn btn-dark" type="submit">Save</button>
                 </form>
             </div>
         )
