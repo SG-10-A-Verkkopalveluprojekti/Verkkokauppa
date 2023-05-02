@@ -5,19 +5,19 @@ export default function Information() {
     const cardData = [
         {
             title: 'Juuso Pesonen',
-            text: '- Done: - Products listing ideas and planning. - Logo and half of products images done with Midjourney AI. - Front page carousel banner images. - Products by category section and products shown on each category. - Category buttons on front page. - Search bar functionality. - Feedback page. - Information page. -  Total of hours done: '
+            text: '- Done: - Products listing ideas and planning. - Logo and half of products images done with Midjourney AI. - Front page carousel banner images. - Products by category section and products shown on each category. - Category buttons on front page. - Search bar functionality. - Feedback page. - Information page. -  Total of logged hours done: 45h 25m '
         },
         {
             title: 'Samuli Pohjola',
-            text: '- Done: - Another example text to showcase the flexibility of the card component. - Total of hours done: '
+            text: '- Done: - Another example text to showcase the flexibility of the card component. - Total of logged hours done: '
         },
         {
             title: 'Tuomas Kärki',
-            text: '- Done: - Yet another example text to demonstrate the reusability of the InfoCard component. - Total of hours done: '
+            text: '- Done: - Yet another example text to demonstrate the reusability of the InfoCard component. - Total of logged hours done: '
         },
         {
             title: 'Riku Ketomäki',
-            text: '- Done: - This is the final example text, but you can customize it as needed. - Total of hours done: ',
+            text: '- Done: - This is the final example text, but you can customize it as needed. - Total of logged hours done: ',
         },
     ];
 
