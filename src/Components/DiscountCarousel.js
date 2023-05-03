@@ -45,26 +45,35 @@ export default function DiscountCarousel({ addToCart }) {
 
     const handleAddToCart = (discount) => {
         addToCart(discount);
-      };
+    };
+
+    const truncateProductName = (name) => {
+        const maxLength = 46;
+        console.log(typeof name)
+        if (name.length > maxLength) {
+            return name.substring(0, maxLength - 1) + '...';
+        }
+        return name;
+    }
 
     return (
-            <Carousel responsive={responsive}>
-                {discounts.map(discount => (
-                    <div key={discount.product_id} className='discount-items'>
-                        <div className='item-carousel' style={{width:"475px",minHeight:"410px"}}>
+        <Carousel responsive={responsive}>
+            {discounts.map(discount => (
+                <div key={discount.product_id} className='discount-items'>
+                    <div className='item-carousel' style={{ width: "475px", minHeight: "410px" }}>
                         <img src={imagesURL + discount.image} />
                         <Link className='discount-link'
                             to={'/showitem/' + discount.product_id}>
                             <p>
-                                {discount.name}
+                                {truncateProductName(discount.name)}
                             </p>
                         </Link>
                         <p className='original-price'>{discount.price.toFixed(2)}€</p>
                         <p className='lowered-price'>{discount.lowered_price.toFixed(2)}€</p>
                         <button class="btn btn-primary" type="button" onClick={() => handleAddToCart(discount)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
-                        </div>
                     </div>
-                ))}
-            </Carousel>
+                </div>
+            ))}
+        </Carousel>
     )
 }

@@ -400,6 +400,10 @@ form .btn {
   text-align: center;
   word-wrap: break-word;
   padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px; /* adjust this value to fit your needs */
 }
 
 .discount-link {

@@ -52,6 +52,14 @@ export default function ProductCarousel1({ addToCart }) {
             })
     }, [])
 
+    const truncateProductName = (name) => {
+        const maxLength = 46;
+        if (name && name.length > maxLength) {
+            return name.substring(0, maxLength - 1) + '...';
+        }
+        return name;
+    }
+
     return (
         <Carousel responsive={responsive}>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
@@ -59,66 +67,66 @@ export default function ProductCarousel1({ addToCart }) {
                 <Link className='product-link'
                     to={'/showitem/' + item1.product_id}>
                     <p>
-                        {item1.name}
+                        {truncateProductName(item1.name)}
                     </p>
                 </Link>
                 <p>{parseFloat(item1.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button" onClick={e => addToCart(item1)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button className="btn btn-primary" type="button" onClick={e => addToCart(item1)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item2?.image} />
                 <Link className='product-link'
                     to={'/showitem/' + item2.product_id}>
                     <p>
-                        {item2.name}
+                        {truncateProductName(item2.name)}
                     </p>
                 </Link>
                 <p>{parseFloat(item2.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button" onClick={e => addToCart(item2)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button className="btn btn-primary" type="button" onClick={e => addToCart(item2)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item3?.image} />
                 <Link className='product-link'
                     to={'/showitem/' + item3.product_id}>
                     <p>
-                        {item3.name}
+                        {truncateProductName(item3.name)}
                     </p>
                 </Link>
                 <p>{parseFloat(item3.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button" onClick={e => addToCart(item3)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button className="btn btn-primary" type="button" onClick={e => addToCart(item3)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item4?.image} />
                 <Link className='product-link'
                     to={'/showitem/' + item4.product_id}>
                     <p>
-                        {item4.name}
+                        {truncateProductName(item4.name)}
                     </p>
                 </Link>
                 <p>{parseFloat(item4.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button" onClick={e => addToCart(item4)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button className="btn btn-primary" type="button" onClick={e => addToCart(item4)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item5?.image} />
                 <Link className='product-link'
                     to={'/showitem/' + item5.product_id}>
                     <p>
-                        {item5.name}
+                        {truncateProductName(item5.name)}
                     </p>
                 </Link>
                 <p>{parseFloat(item5.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button" onClick={e => addToCart(item5)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button className="btn btn-primary" type="button" onClick={e => addToCart(item5)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
             <div className='item-carousel' style={{width:"475px",minHeight:"390px"}}>
             <img src={imagesURL + item6?.image} />
                 <Link className='product-link'
                     to={'/showitem/' + item6.product_id}>
                     <p>
-                        {item6.name}
+                        {truncateProductName(item6.name)}
                     </p>
                 </Link>
                 <p>{parseFloat(item6.price).toFixed(2)}€</p>
-                <button class="btn btn-primary" type="button" onClick={e => addToCart(item6)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
+                <button className="btn btn-primary" type="button" onClick={e => addToCart(item6)}><TbIcons.TbShoppingCartPlus /> Add to cart</button>
             </div>
         </Carousel>
     )
