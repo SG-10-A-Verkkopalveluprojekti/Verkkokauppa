@@ -9,7 +9,7 @@ export default function Information() {
         },
         {
             title: 'Samuli Pohjola',
-            text: '- Done: - Another example text to showcase the flexibility of the card component. - Total of logged hours done: '
+            text: '- Done: - Front page layout. - Front page CSS. - Single product backend. - Product carousel. - Discount carousel. - Code that shows discount prices. - Total of logged hours done: 44h 45m'
         },
         {
             title: 'Tuomas Kärki',

@@ -16,15 +16,15 @@ const responsive = {
         items: 3
     },
     desktop: {
-        breakpoint: { max: 3000, min: 1480 },
-        items: 2
+        breakpoint: { max: 3000, min: 1250 },
+        items: 4
     },
     tablet: {
-        breakpoint: { max: 1480, min: 464 },
-        items: 1
+        breakpoint: { max: 1250, min: 800 },
+        items: 2
     },
     mobile: {
-        breakpoint: { max: 464, min: 0 },
+        breakpoint: { max: 800, min: 0 },
         items: 1
     }
 };
@@ -48,7 +48,7 @@ export default function DiscountCarousel({ addToCart }) {
     };
 
     const truncateProductName = (name) => {
-        const maxLength = 46;
+        const maxLength = 30;
         console.log(typeof name)
         if (name.length > maxLength) {
             return name.substring(0, maxLength - 1) + '...';
@@ -57,10 +57,11 @@ export default function DiscountCarousel({ addToCart }) {
     }
 
     return (
-        <Carousel responsive={responsive}>
+        <Carousel responsive={responsive} additionalTransfrom={-15}
+        removeArrowOnDeviceType={["mobile"]}>
             {discounts.map(discount => (
                 <div key={discount.product_id} className='discount-items'>
-                    <div className='item-carousel' style={{ width: "475px", minHeight: "410px" }}>
+                    <div className='item-carousel' style={{width: "95%",minHeight: "410px" }}>
                         <img src={imagesURL + discount.image} />
                         <Link className='discount-link'
                             to={'/showitem/' + discount.product_id}>
