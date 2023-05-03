@@ -13,7 +13,7 @@ export default function Information() {
         },
         {
             title: 'Tuomas Kärki',
-            text: '- Done: - Yet another example text to demonstrate the reusability of the InfoCard component. - Total of logged hours done: '
+            text: '- Done: - Half of product images done with DALL·E 2 - Shopping cart page layout - Adding product to cart - Displaying the shopping cart - Total of logged hours done: 33h'
         },
         {
             title: 'Riku Ketomäki',
