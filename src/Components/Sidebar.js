@@ -7,6 +7,7 @@ import {SidebarData} from './SidebarData';
 import SubMenu from './SubMenu';
 import {IconContext} from 'react-icons/lib';
 
+// Codes source: https://www.youtube.com/watch?v=mN3P_rv8ad4
 // Creating and styling of sidebar div with 'styled-components'
 const Nav = styled.div`
     height: 80px;
